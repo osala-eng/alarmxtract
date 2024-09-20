@@ -6,13 +6,17 @@ authors = ["Jashon Osala <jashonosala@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = ">=3.12, <3.14"
 pysimplegui = "^5.0.6"
 black = "^24.8.0"
 ruff = "^0.6.6"
 pytest = "^8.3.3"
 pre-commit = "^3.8.0"
 
+
+[tool.poetry.group.dev.dependencies]
+pyinstaller = "^6.10.0"
+poethepoet = "^0.28.0"
 
 [tool.black]
 skip-string-normalization = true
@@ -43,6 +47,9 @@ extra-standard-library = ["typing"]
 section-order = ["future", "standard-library", "third-party", "first-party", "local-folder"]
 known-first-party = []
 
+
+[tool.poe.tasks]
+compile =   "pyinstaller --onefile --windowed alarmxtract/main.py"
 
 [build-system]
 requires = ["poetry-core"]
