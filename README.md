@@ -1,6 +1,17 @@
 # AVEVA Alarm Extractor
 
-Convers Aveva alarm files (.alh) to excel
+Converts Aveva EDGE alarm files (.alh) to excel
+
+
+## Istallation
+
+#### Windows
+
+- Installation on windows
+
+#### Linux
+
+- Installation on linux
 
 
 
